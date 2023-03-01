@@ -10,3 +10,7 @@ jobs:
             poetry shell
             poetry install
             poetry run pytest test_land_reg_two.py
+workflows:
+  Testing-Land-Reg:
+    jobs:
+      - test
