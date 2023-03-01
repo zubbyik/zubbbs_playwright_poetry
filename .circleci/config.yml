@@ -1,0 +1,12 @@
+jobs:
+  test:
+    docker:
+      - image: cimg/python:3.11.2-node
+    steps:
+      - checkout
+      - name: Testing A land reg
+      - run:
+          command: |
+            poetry shell
+            poetry install
+            poetry run pytest test_land_reg_two.py
