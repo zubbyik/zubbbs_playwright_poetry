@@ -1,12 +1,12 @@
 version: 2.1
 jobs:
-  test:
+  Land-Reg:
     docker:
       - image: cimg/python:3.11.2-node
     steps:
       - checkout
-      - name: Testing A land reg
       - run:
+          name: Testing A land reg
           command: |
             poetry shell
             poetry install
@@ -14,4 +14,4 @@ jobs:
 workflows:
   TestingLandReg:
     jobs:
-      - test
+      - Land-Reg
